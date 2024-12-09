@@ -30,7 +30,6 @@ const HeroSection = () => {
           backgroundImage: "url('/pexels-photo-258154.webp')",
         }}
       >
-        
         <nav
           className={`fixed top-0 w-full flex justify-between items-center py-4 bg-white ${
             navBgOpacity > 0.1 ? "backdrop-filter backdrop-blur-lg" : ""
@@ -74,7 +73,7 @@ const HeroSection = () => {
             </li>
           </ul>
           <button
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-white focus:outline-none mr-4"
             onClick={toggleMobileMenu}
           >
             &#x22EE;
@@ -83,6 +82,12 @@ const HeroSection = () => {
 
         {isMobileMenuOpen && (
           <div className="md:hidden fixed top-0 right-0 w-2/3 h-full bg-white z-50">
+            <button
+              className="absolute top-4 right-4 text-black focus:outline-none"
+              onClick={toggleMobileMenu}
+            >
+              &#x2715;
+            </button>
             <ul className="flex flex-col items-center justify-center h-full space-y-4 text-black uppercase text-base">
               <li>
                 <a href="#">About Us</a>
